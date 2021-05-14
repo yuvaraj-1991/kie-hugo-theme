@@ -1,0 +1,59 @@
+{{- partial "head.html" . -}}
+
+{{- partial "header.html" . -}}
+
+{{ define "main" }} {{ range $index, $val := $.Param "bands" }} {{ if modBool $index 2 }}
+<pfe-band color="lightest">
+    {{ else }}
+    <pfe-band color="dark">
+        {{ end }}
+        <h2 slot="pfe-band--header">{{ $val.header }}</h2>
+        {{ $val.content }} {{ if $val.image }}
+        <img slot="pfe-band--aside" src="{{ $val.image }}" alt=""> {{ end }}
+    </pfe-band>
+    {{ end }} {{ end }}
+
+    
+
+    <pfe-band>
+        <h2 slot="pfe-band--header">Header Slot</h2>
+        <p>This content is in the main slot. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata dolor sit amet.</p>
+        <pfe-card slot="pfe-band--aside" color="lightest">
+          <h3 slot="pfe-card--header">Aside slot</h3>
+          <p>Content for a card that is in the aside slot.</p>
+        </pfe-card>
+        <div slot="pfe-band--footer">
+          <p>This is the footer slot.</p>
+          <pfe-cta>
+            <a href="#">Learn more</a>
+          </pfe-cta>
+        </div>
+      
+      
+      <h2>PFE-Layouts</h2>
+      <div class="pfe-l-grid pfe-m-gutters pfe-m-all-4-col example">
+        <div><h3>DASHBUILDER: GETTING STARTED GUIDE</h3><p>DashBuilder is a full-featured web application that allows non-technical users and programmers to create business dashboards.
+
+          Dashboard data can be extracted from heterogeneous sources of information such as Prometheus, JDBC databases, or regular text files.
+          
+          The resulting dashboard can be deployed in a cloud environment using DashBuilder Runtime.
+          
+          In this guide, we will show you how to create your first dashboard using DashBuilder in designer and Java mode.           
+          
+          </p></div>
+        <div><h3>KOGITO TOOLING 0.9.1 RELEASED!</h3><p>We have just launched a fresh new Kogito Tooling release! 🎉 On the 0.9.1 release, we made a lot of improvements and bug fixes.
+
+          We are also happy to announce the MVP of our DMN Runner and many enhancements on Custom Task support on BPMN.
+          
+          This post will give a quick overview of this release and add some highlights of our 0.9.0 release. I hope you enjoy it!
+          
+          Custom Task Support Enhancement on BPMN
+          We made many improvements regarding custom task support on BPMN, especially related to compatibility with Business Central projects.</p></div>
+        <div><h3>SIMPLEST CUSTOM TASKS IN KOGITO</h3><p>As a Kogito developer, you can add custom tasks to the designer palette. Customs tasks are process’ activities that allow users to perform custom operations within your process flows. In addition, custom tasks can predefine different visual and execution time properties of the node on the canvas. An example can be input and output parameters, icon, predefined name, documentation, and others.
+
+          In this example, we will take a look at how to create basic custom tasks from scratch. We will use Kogito developers tools for VS Code.</p></div>
+        
+      </div>
+    </pfe-band>
+
+      {{- partial "footer.html" . -}}

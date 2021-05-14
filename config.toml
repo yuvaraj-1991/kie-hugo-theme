@@ -2,3 +2,11 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "KIE - Knowledge is Everything"
 theme = "kie"
+
+# Header
+[menu]
+  [[menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        url = "/blog.html/"
+        weight = 1 

@@ -27,6 +27,7 @@
     "@patternfly/pfe-band": "^1.6.0",
     "@patternfly/pfe-card": "^1.6.0",
     "@patternfly/pfe-cta": "^1.6.0",
+    "@patternfly/pfe-styles": "^1.7.0",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "file-loader": "^6.2.0"
   }
