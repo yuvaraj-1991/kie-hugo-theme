@@ -189,3 +189,7 @@ nav footer .row,
 footer nav .row {
   padding: 0;
 }
+
+.kogito img {
+    max-width: 300px;
+}
